@@ -9,7 +9,7 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false)
  
   return (
-    <main className="w-full h-screen px-20 py-4">
+    <main className="w-full h-screen lg:px-20 py-4 px-4">
       <Nav setIsDarkMode={setIsDarkMode} isDarkMode={isDarkMode} />
       <FlexCard isDarkMode={isDarkMode} />
 

@@ -8,7 +8,7 @@ interface INav {
 }
 export default function Nav({isDarkMode,setIsDarkMode}:INav) {
   return (
-    <div className="w-full py-8 flex justify-between items-center gap-9">
+    <div className="w-full lg:py-8 py-4 flex flex-col lg:flex-row justify-between items-center gap-9">
       <Toggler isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <SearchBar />
     </div>

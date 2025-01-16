@@ -17,13 +17,13 @@ export default function LocationCard({ isDarkMode }: ILocationCard) {
   return (
     <div
       className={`${isDarkMode ? "bg-[#333] text-white" : "bg-white text-black transition-all"
-        } w-full h-full flex justify-center items-center flex-col shadow-md rounded-2xl`}
+        } w-full h-full flex justify-center items-center flex-col shadow-md rounded-2xl py-4 lg:py-0`}
     >
-      <p className="text-4xl text-center font-bold">{weatherData?.name}</p>
+      <p className="lg:text-4xl text-2xl text-center font-bold">{weatherData?.name}</p>
 
       <div className="flex justify-center items-center flex-col">
-        <p className="text-3xl font-extrabold">{localTime}</p>
-        <p className="text-md font-medium">{weatherDate}</p>
+        <p className="lg:text-3xl text-xl font-extrabold">{localTime}</p>
+        <p className="lg:text-md text-sm font-medium">{weatherDate}</p>
       </div>
     </div>
   );

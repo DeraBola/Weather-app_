@@ -44,8 +44,8 @@ export default function SearchBar() {
   }, [city]);
 
   return (
-    <div className="w-full flex items-center justify-between">
-      <div className="w-[70%] bg-white rounded-3xl relative border shadow-md h-16">
+    <div className="w-full flex flex-col lg:flex-row gap-4 lg:gap-0 items-center justify-between">
+      <div className="lg:w-[70%] w-full bg-white rounded-3xl relative border shadow-md h-16">
         <FaSearch color="black" size={30} className='absolute top-3 left-3' />
         <input
           type="search"
