@@ -53,14 +53,14 @@ export default function ForecastCard({ isDarkMode }: IForecastCard) {
     <div
       className={`${
         isDarkMode ? "bg-[#333] text-white" : "bg-white text-black"
-      } transition-all w-full h-full shadow-md rounded-2xl flex justify-between items-center p-3`}
+      } transition-all w-full  shadow-md rounded-2xl flex lg:flex-row flex-col justify-between items-center p-3`}
     >
-      <div className="w-[33%] h-full flex justify-center gap-8 items-center flex-col">
+      <div className="w-[33%] flex justify-center gap-8 items-center flex-col">
         <div>
-          <p className="text-4xl font-extrabold" onClick={toggleUnit}>
+          <p className="lg:text-4xl text-2xl font-extrabold" onClick={toggleUnit}>
             {temperature}°{unit === 'metric' ? 'C' : 'F'}
           </p>
-          <p className="text-md font-extrabold">Feels like: {feelsLike}°{unit === 'metric' ? 'C' : 'F'}</p>
+          <p className="lg:text-md text-sm font-extrabold">Feels like: {feelsLike}°{unit === 'metric' ? 'C' : 'F'}</p>
         </div>
 
         <div className="flex justify-center items-center gap-5">
@@ -86,14 +86,14 @@ export default function ForecastCard({ isDarkMode }: IForecastCard) {
         </div>
       </div>
 
-      <div className="w-[33%] h-full flex-col flex justify-center items-center">
+      <div className="lg:w-[33%] w-full flex-col flex justify-center items-center">
         <div className="flex items-center justify-center w-24 h-24">
           <WeatherIcon iconCode={iconCode} />
         </div>
-        <p className="text-2xl text-center font-bold mt-6">{weatherData?.weather[0]?.description}</p>
+        <p className="text-2xl text-center font-bold lg:mt-6 mt-0 text-nowrap">{weatherData?.weather[0]?.description}</p>
       </div>
 
-      <div className="w-[33%] flex justify-between p-2 flex-wrap">
+      <div className="lg:w-[33%] w-full flex justify-between p-2 flex-wrap">
         {widgetsArr.map((widget) => (
           <Widget value={widget.value} condition={widget.condition} />
         ))}
